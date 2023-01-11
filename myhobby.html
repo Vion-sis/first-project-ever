@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myhobby</title>
+    <style>
+      body {
+        background: plum;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      p {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 18px;
+        line-height: 25px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .container {
+        max-width: 600px;
+        background-color: aliceblue;
+        margin: auto;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .first-image {
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+      .first-image:hover {
+        transform: scale(1.2);
+        background: rgb(7, 8, 15);
+        opacity: 0.4;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      .more-image:hover {
+        transform: scale(2) rotate(360deg);
+      }
+      img {
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        transition: all 150ms ease-in-out;
+      }
+      .learn-afrodance {
+        border-radius: 18px;
+        padding: 8px;
+        font-size: 16px;
+        display: block;
+        margin: auto;
+      }
+      .learn-afrodance:hover {
+        cursor: pointer;
+        background: plum;
+        color: black;
+      }
+      .dark-theme {
+        display: block;
+        margin: 20px auto;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: black;
+        color: aliceblue;
+      }
+      .dark-theme:hover {
+        cursor: pointer;
+        background-color: aliceblue;
+        color: black;
+      }
+      footer {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .dark {
+        background: rgb(16, 16, 16);
+        color: white;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-theme">Change theme</button>
+    <div class="container">
+      <h1>💃 What is Afrodance?</h1>
+      <h2>My favorite type of dance</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/248/original/img_5.jpeg?1673402901"
+        alt=""
+        class="first-image"
+      />
+      <div class="grid">
+        <img
+          src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/246/original/img_2.jpeg?1673402878"
+          alt=""
+          class="more-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/247/original/img_3.jpeg?1673402890"
+          alt=""
+          class="more-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/250/original/im.jpeg?1673403340"
+          alt=""
+          class="more-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/245/original/img_1.jpeg?1673402868"
+          alt=""
+          class="more-image"
+        />
+      </div>
+      <p>
+        African dance refers to the various dance styles of Sub-Saharan Africa.
+        These dances are closely connected with the traditional rhythms and
+        music traditions of the region. Music and dancing is an integral part of
+        many traditional African societies.
+      </p>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/African_dance"
+          >Read on wikipedia 📖</a
+        >
+      </p>
+      <button class="learn-afrodance">Learn Afrodance</button>
+    </div>
+    <footer>
+      coded with ❤️ by <a href="https://github.com/Vion-sis"> Viona Ntitai</a>
+    </footer>
+    <script>
+      function changePageTheme() {
+        let bodyTransform = document.querySelector("body");
+        if (bodyTransform.classList.contains("dark")) {
+          bodyTransform.classList.remove("dark");
+        } else {
+          bodyTransform.classList.add("dark");
+        }
+      }
+      let changeTheme = document.querySelector(".dark-theme");
+      changeTheme.addEventListener("click", changePageTheme);
+    </script>
+  </body>
+</html>
